@@ -32,3 +32,33 @@ Vega-Lite gets significant contributions from its community. Please see the [con
   url = {http://idl.cs.washington.edu/papers/vega-lite},
 }
 ```
+
+
+```mermaid
+graph LR
+    A[Start] --> B[Process AI Data]
+    B --> C[Train Model]
+    C --> D[Deploy Model]
+    D --> E[Monitor Results]
+    E --> F[Refine Model]
+    F --> C
+```
+
+```vega-lite
+{
+  "data": {
+    "values": [
+      {"Year": 2020, "AI Adoption Rate": 20},
+      {"Year": 2021, "AI Adoption Rate": 30},
+      {"Year": 2022, "AI Adoption Rate": 40},
+      {"Year": 2023, "AI Adoption Rate": 50},
+      {"Year": 2024, "AI Adoption Rate": 60}
+    ]
+  },
+  "mark": "bar",
+  "encoding": {
+    "x": {"field": "Year", "type": "temporal"},
+    "y": {"field": "AI Adoption Rate", "type": "quantitative"}
+  }
+}
+```
